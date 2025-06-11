@@ -1,18 +1,20 @@
 import type { Config } from "tailwindcss";
 
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config: Config = {
+  content: ["./app/**/*.{js,ts,jsx,tsx}"], // Ensures Tailwind scans your app directory
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#4F46E5", // Custom primary color (adjust as needed)
+        secondary: "#9333EA", // Custom secondary color
+        background: "#0F172A", // Deep blue background for modern look
+      },
+      backdropBlur: {
+        xs: "2px",
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;

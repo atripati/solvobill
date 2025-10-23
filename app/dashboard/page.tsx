@@ -9,6 +9,8 @@ import { Menu } from "@headlessui/react";
 import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebase"; // make sure you have this
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '@/firebase';  
 
 
 interface Transaction {
